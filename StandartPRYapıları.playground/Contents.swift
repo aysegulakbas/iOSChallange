@@ -1,4 +1,5 @@
 import UIKit
+import Darwin
 
 var s1 = 60
 var s2 = 50
@@ -157,9 +158,18 @@ switch islem {
         print("Dogru seçim yapınız lütfen.")
 }
 
+var num = 10
+var result = num % 2
 
-
-
+switch result {
+    case 0:
+        print("Çift sayidir")
+    case 1:
+        print("Tek sayidir")
+    default:
+        print("Belirli Değil")
+        
+}
 
 
 
