@@ -74,6 +74,29 @@ for no in numaralar {
 print("Tekler \(tekler)")
 print("Ciftler \(ciftler)")
 
+var notlar = [Int] ()
+var dersler = [String]()
 
+dersler.append("Tarih")
+notlar.append(20)
 
+dersler.append("Fizik")
+notlar.append(100)
 
+dersler.append("Matematik")
+notlar.append(100)
+
+dersler.append("Biyoloji")
+notlar.append(40)
+
+dersler.append("Kimya")
+notlar.append(60)
+
+var toplam1 = 0
+
+for i in 0...(notlar.count-1) {
+    print("\(dersler[i]) : \(notlar[i])")
+    toplam1 = toplam1 + notlar[i]
+}
+
+print("Ortalama : \(toplam1/dersler.count)")
