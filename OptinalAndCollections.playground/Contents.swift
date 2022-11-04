@@ -136,5 +136,66 @@ print(fruits.max()!)
 print(fruits.min()!)
 
 
+// DICTIONARY
+
+var dict1 = [Int:String]()
+var dict2 = [1:"bir",2:"iki"]
+var dict3:[Int:String] = [5:"bes",9:"dokuz"]
+
+var iller = [16:"bursa",34:"istanbul",6:"ankara"]
+
+iller[16] = "yeni bursa" //update ettik veriyi
+iller.updateValue("yeni ankara", forKey: 6) //update ettik veriyi (method kullanarak)
+print(iller)
+var ters = iller.reversed() // ters cevirir.
+
+//Dictionary Dönüşümleri
+
+var dersler1 = ["kimya", "matematik","Edebiyat"]
+var notlar1 = [50,80,70]
+
+var dersNotlari = Dictionary(uniqueKeysWithValues: zip(notlar1,dersler1)) // dict birlestirme
+print(dersNotlari)
+
+var urunFiyatlari:[Double:String] = [15.99:"Kitap",59.99:"T-shirt",239.99:"Saat"]
+
+var fiyatlar1 = [Double](urunFiyatlari.keys)
+var urunler1 = [String](urunFiyatlari.values) // Dict parçalama
+
+print(fiyatlar1)
+print(urunler1)
+
+// Dictionary Filtreleme
+
+var okul:[Int:String] = [154:"Ahmet",67:"Mehmet",871:"Zeynep",45:"Ahmet"]
+var sonuc11 = okul.filter({$0.key > 70})
+print(sonuc11)
+
+var sonuc22 = okul.filter({$0.value == "Ahmet"})
+print(sonuc22)
+
+// Dictionary Karne App
+var derslerNotlar2 = [String:Int]()
+
+derslerNotlar2["tarih"] = 20
+derslerNotlar2["Fizik"] = 80
+derslerNotlar2["matematik"] = 100
+derslerNotlar2["kimya"] = 50
+derslerNotlar2["biyoloji"] = 40
+
+var toplam5 = 0
+
+for (ders,not) in derslerNotlar2 {
+    print("\(ders) : \(not)")
+    toplam5 += not
+}
+print("Ortalama: \(toplam5/derslerNotlar2.count)")
+
+
+
+
+
+
+
 
 
