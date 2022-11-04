@@ -100,3 +100,41 @@ for i in 0...(notlar.count-1) {
 }
 
 print("Ortalama : \(toplam1/dersler.count)")
+
+
+// Set
+var fruits: Set = ["çilek","muz","elma","kivi"] // tekrar aynı veriyi yazamayız. Veriler tkrarlanmaz.
+//Boş bir set oluşturma
+var rakamlar = Set <Int> ()
+
+for fruit in fruits {
+    print(fruit)
+}
+if fruits.isEmpty {
+    print("empty")
+}
+else{
+   print("not empty")
+}
+fruits.insert("Armut")
+
+print(fruits)
+
+print(fruits.count)
+
+if let temp = fruits.first {
+    print(temp)
+}
+
+if fruits.contains("muz") {
+    print("muz var :D")
+}
+else {
+    print("Muz yok baby")
+}
+print(fruits.max()!)
+print(fruits.min()!)
+
+
+
+
