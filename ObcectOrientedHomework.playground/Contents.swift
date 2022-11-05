@@ -76,3 +76,17 @@ func maasHesapla(gun:Int) -> Int {
 
 let hesaplananMaas = maasHesapla(gun: 20)
 print(hesaplananMaas)
+
+func ucretHesapla(kota:Int) -> Int {
+    var ucret = 0
+    if kota > 50 {
+        ucret = ((kota - 50) * 4) + 100
+    }
+    else {
+        ucret = 100
+    }
+    return ucret
+}
+
+let ucret1 = ucretHesapla(kota: 50)
+print(ucret1)
