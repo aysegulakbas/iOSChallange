@@ -37,3 +37,42 @@ func adetHesapla(kelime:String,harf:Character){
 4
 adetHesapla(kelime: "ayse", harf: "a")
 
+
+// Algorithm question answer
+var nums = [2,7,11,15]
+var target = 26
+
+for (index,i) in nums.enumerated() {
+
+    for j in nums {
+        if i + j == target {
+            print(index)
+        }
+    }
+}
+
+func icAciHesapla(kenarSayisi:Int) -> Int {
+    let sonuc = (kenarSayisi - 2) * 180
+    
+    return sonuc
+}
+
+let hesap = icAciHesapla(kenarSayisi: 4)
+print(hesap)
+
+func maasHesapla(gun:Int) -> Int {
+    let calismaSaati = gun * 8
+    var maas = 0
+    if calismaSaati > 160
+    {
+        maas = (calismaSaati - 160) * 20 + (160 * 10)
+    }
+    else  {
+        maas = calismaSaati * 10
+    }
+    return maas
+        
+}
+
+let hesaplananMaas = maasHesapla(gun: 20)
+print(hesaplananMaas)
