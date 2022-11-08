@@ -68,3 +68,55 @@ var topkapiSarayi = Saray(kuleSayisi: 20, pencereSayisi: 10)
 print(topkapiSarayi.kuleSayisi!)
 var bogazVilla = Villa(garajVarmi: true, kuleSayisi: 20, pencereSayisi: 10)
 print(bogazVilla.garajVarmi!)
+
+// Oveerride
+
+class Hayvan {
+    func sesCikar(){
+        print("sesim yok")
+    }
+}
+
+class Memeli:Hayvan{
+    
+}
+class Kedi:Memeli {
+    override func sesCikar() {
+        print("Miyav miyav")
+    }
+    
+
+}
+class Kopek:Memeli {
+    override func sesCikar() {
+        print("Hav hav")
+    }
+}
+var h = Hayvan()
+
+h.sesCikar()
+var m = Memeli()
+m.sesCikar()
+var k = Kedi()
+k.sesCikar()
+var ko = Kopek()
+ko.sesCikar()
+
+var hayvan:Hayvan = Kopek() // Polimorfizm
+hayvan.sesCikar()
+
+// is yapısı type checking
+var saray = Saray(kuleSayisi: 2, pencereSayisi: 5)
+if saray is Saray
+{
+    print("bu bir saraydır")
+}
+else {
+    print("bu bir saray degildir")
+}
+
+// Upcasting
+var ev1:Ev = Saray(kuleSayisi: 2, pencereSayisi: 10) as Ev
+
+// Downcasting
+var ev2 = Ev(pencereSayisi: 44)
