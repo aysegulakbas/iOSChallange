@@ -1,6 +1,6 @@
 import UIKit
 
-/* var str = "Hello, Playground"
+var str = "Hello, Playground"
 var myNumbero = 5*4
 10*5
 
@@ -53,7 +53,7 @@ if name_ == "Ahmet" {
 } else if name_ == ("Mehmet") {
     print("This is Mehmet")
 } else {
-    print("Final option this is Kerem." ) } */
+    print("Final option this is Kerem." ) }
 
 
 // Plural Condition
@@ -71,7 +71,7 @@ if username == "aysegul" && password == 1234 {
     print("Username and Password are wrong! Please try again.")
 }
 
-/*// Alan hesap
+//Alan hesap
 
 let option1 = "Cember Alani"
 let option2 = "Diktorgen Alani"
@@ -169,7 +169,195 @@ if let temp = str1 {
 }
 else{
     print("str included nil values.")
-} */
+}
+
+
+// ****** Collections Array - Set - Dictionary *******
+// Array index no var   , Set veriyi kariisk kaydeder.   , Dictionary veriler key -values iliskisi vae
+
+// Array ayni tur verileri tutar index no  0 dan baslar.
+
+var array1 = [Int]() // create empty array
+
+var fruits:[String] = ["Strawberry","Banana","Apple","Kiwi"]
+
+fruits.append("Cherry")
+print(fruits)
+
+fruits += ["hey"]
+print(fruits)
+fruits[2] = "pink banana"
+print(fruits)
+
+
+// Array Iterating - Data pull with loops
+
+for fruit in fruits {
+    print(fruit)
+}
+
+for (index,fruitt) in fruits.enumerated(){
+    print("\(index). meyve \(fruitt) dir.")
+}
+
+fruits.insert("Orange", at: 2)
+print(fruits)
+
+fruits.reverse()
+fruits.isEmpty
+fruits.count
+fruits.first
+fruits.last
+fruits.contains("Carrot")
+fruits.sort()
+
+// Array map filter / Search operations
+
+var numbers123 = [1,2,3,4,5,6,7,8,9,10]
+
+var result12 = numbers123.filter({$0>8})
+print(result12)
+var result123 = numbers123.filter({$0>3 && $0<7})
+print(result123)
+
+
+// Array Example Avarage Account
+
+var array2 = [30,40,70,100,50,80,90,50,70,40]
+var rslt = 0
+for i in array2 {
+    rslt += i
+}
+rslt = rslt / array2.count
+print(rslt)
+
+// Array example change contain
+
+for (index,i) in numbers123.enumerated() {
+    let rslt1 = i * 5
+    numbers123[index] = rslt1
+}
+print(numbers123)
+
+
+// Array Example Find Singles and Doubles Arrays
+
+var singles = [Int]()
+var doubles = [Int]()
+
+for i in numbers123 {
+    if i % 2 == 0 {
+        doubles.append(i)
+    }
+    else {
+        singles.append(i)
+    }
+}
+print(singles)
+print(doubles)
+
+// Array Lessons - Score Applications
+
+var lessons = [String]()
+var scores = [Int]()
+
+lessons.append("history")
+scores.append(20)
+
+lessons.append("phy")
+scores.append(80)
+
+lessons.append("math")
+scores.append(100)
+
+lessons.append("bio")
+scores.append(40)
+
+lessons.append("che")
+scores.append(60)
+
+var total = 0
+
+for i in 0...(scores.count - 1) {
+    print("\(lessons[i]) : \(scores[i])")
+    total += scores[i]
+}
+print("*********************")
+print("Ortalama : \(total/lessons.count)")
+
+// Array Example Search Name
+
+
+var names123 = ["John","Denny","Clara","Rendy"]
+var nm23 = "Perl"
+
+for i in names123 {
+    
+    if i == nm23 {
+        print("Thats true because OK.")
+        break
+    }
+    else{
+        print("No.")
+        break
+    }
+}
+
+// Set operations
+
+var k = Set <String>()
+k.insert("istanbul")
+k.insert("tekirdag")
+
+
+// Dictionary Structure
+
+var dic1 = [Int:String]()
+
+var dict2 = [3.14:"pi",2.71:"e"]
+
+var states = [54:"Sakarya",35:"Izmir",34:"Istanbul"]
+states[60] = "Tokat"
+states[41] = "Kocaeli"
+print(states)
+
+states[35] = "New Izmir"
+print(states)
+
+for (key,value) in states {
+    
+    print("\(key) : \(value).")
+}
+
+states.removeValue(forKey: 35)
+print(states)
+states.isEmpty
+states.reversed()
+states.count
+states.first
+
+// Dictionary operations
+
+var lessons1:[String] = ["Che","Math","Phy"]
+var scores1:[Int] = [20,80,90]
+
+var lessonsScores = Dictionary(uniqueKeysWithValues: zip(lessons1,scores1))
+print(lessonsScores)
+
+var prodPrice = ["Book":75.19,"Pencil":59.99,"Watch":178.89]
+var prices = [Double](prodPrice.values)
+var products = [String](prodPrice.keys)
+print(products)
+print(prices)
+
+// Dictionary Filters
+
+var school:[Int:String] = [154:"Ahmet",67:"Mehmet",871:"Zeynep",45:"Ahmet"]
+var rsl1 = school.filter({$0.key>70})
+var rsl2 = school.filter({$0.value == "Ahmet"})
+print(rsl1)
+print(rsl2)
+
 
 
 
