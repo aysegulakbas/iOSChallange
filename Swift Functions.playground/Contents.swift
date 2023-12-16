@@ -119,4 +119,21 @@ var v2 = sumVariadic(numbers: 17,256,45,6789,23)
 print(v1)
 print(v2)
 
-// 58.video
+
+// Multi back return functions
+
+func operation(numbers:[Int]) -> (sums:Int, facc:Int){
+    var sums = 0
+    var facc = 1
+    
+    for s in numbers {
+        sums += s
+        facc *= s
+    }
+    return (sums,facc)
+}
+
+var arr = [1,2,3,4,5]
+var array = operation(numbers: arr)
+print(array)
+
