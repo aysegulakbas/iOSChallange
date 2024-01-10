@@ -221,4 +221,89 @@ class Dog:Animal {
     }
 }
 
+var animal:Animal = Dog()
+animal.getVoice()
+
+// Extension eg
+
+extension Double {
+    
+    var km:Double {return self*1000.0}
+    var m:Double {return self}
+    var cm:Double {return self/100.0}
+    var mm:Double {return self/1000.0}
+    
+}
+print("10 cm \(10.cm) metredir")
+print("10 km \(10.km) metredir")
+
+// Protocol usage
+protocol Protokol1 {
+    
+    var veriable: Int {get set}
+    func metod1 ()
+    func metod2 () -> String
+}
+
+class ClassABC:Protokol1 {
+    var veriable = 10
+    
+    func metod1() {
+        print("Whatsapp?")
+    }
+    
+    func metod2() -> String {
+        return "Hey"
+    }
+    
+    
+}
+var objn = ClassABC()
+objn.metod1()
+print(objn.metod2())
+print(objn.veriable)
+
+// Protocol Example
+
+protocol Squeezable {
+    func howToSqueez()
+}
+
+protocol Eatable {
+    func howToEat()
+}
+
+class Lion{
+    
+}
+class Chicken:Eatable{
+    func howToEat() {
+        print("Very Delicious!")
+    }
+}
+class Apple:Eatable,Squeezable {
+    func howToEat() {
+        print("Very yummy")
+    }
+    func howToSqueez() {
+        print("Very waterly")
+    }
+}
+
+class AmasyaApple:Apple {
+    override func howToEat() {
+        print("very deliious and yummy!!!")
+    }
+    override func howToSqueez() {
+        print("Very waterly and cold.")
+    }
+}
+
+var amsyapl = AmasyaApple()
+amsyapl.howToEat()
+amsyapl.howToSqueez()
+
+var chick = Chicken()
+chick.howToEat()
+
 
