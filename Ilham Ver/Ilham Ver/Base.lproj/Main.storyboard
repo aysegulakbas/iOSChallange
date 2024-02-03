@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Ilham_Ver" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stevejobs" translatesAutoresizingMaskIntoConstraints="NO" id="45Q-fh-bpu">
+                                <rect key="frame" x="76" y="59" width="241" height="162"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yqW-pW-4nF">
+                                <rect key="frame" x="154.33333333333334" y="241" width="84.333333333333343" height="28.333333333333314"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Steve Jobs">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="systemPinkColor"/>
+                                            <font key="NSFont" metaFont="system" size="17"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;Dunyayi degistirebilecegini dusunecek kadar cilgin olan kisiler dunyayi degistirebilirler&quot;" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HP5-vk-0Qh">
+                                <rect key="frame" x="5" y="419.33333333333331" width="383" height="40.666666666666686"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="5" id="nEA-Li-52M"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6By-UD-Gmf">
+                                <rect key="frame" x="8" y="748" width="377" height="35"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Change">
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W5K-WG-XlS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="HP5-vk-0Qh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="38V-dG-RmS"/>
+                            <constraint firstItem="yqW-pW-4nF" firstAttribute="top" secondItem="45Q-fh-bpu" secondAttribute="bottom" constant="20" id="4lF-Jw-8dv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="45Q-fh-bpu" secondAttribute="bottom" constant="597" id="9GW-dq-O6i"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6By-UD-Gmf" secondAttribute="trailing" constant="8" id="Rx0-6Z-IfF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="6By-UD-Gmf" secondAttribute="bottom" constant="35" id="TSB-nE-hd5"/>
+                            <constraint firstAttribute="trailing" secondItem="HP5-vk-0Qh" secondAttribute="trailing" constant="5" id="Wad-kE-MIE"/>
+                            <constraint firstItem="HP5-vk-0Qh" firstAttribute="top" secondItem="yqW-pW-4nF" secondAttribute="bottom" constant="150" id="ZHf-fn-3mt"/>
+                            <constraint firstItem="45Q-fh-bpu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="b1N-WM-YdR"/>
+                            <constraint firstItem="6By-UD-Gmf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="k4o-Ka-gaK"/>
+                            <constraint firstItem="yqW-pW-4nF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ksr-Lz-XTf"/>
+                            <constraint firstItem="6By-UD-Gmf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="kwf-HC-rku"/>
+                            <constraint firstItem="45Q-fh-bpu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="76" id="lse-Ub-zgb"/>
+                            <constraint firstItem="45Q-fh-bpu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="pCl-B8-DCd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="HP5-vk-0Qh" secondAttribute="bottom" constant="358" id="urx-7Y-iSv"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-54.198473282442748" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="stevejobs" width="100" height="100.33333587646484"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
